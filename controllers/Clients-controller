@@ -4,10 +4,6 @@ const clientsController = {
 // get all Clients
 getAllClients(req, res) {
     Clients.find({})
-    .populate({
-        path: 'Groups',
-        select: '-__v'
-    })
       .select('-__v')
       .sort({ _id: -1 })
       .then(dbClientsData => res.json(dbClientsData))
@@ -20,10 +16,6 @@ getAllClients(req, res) {
       // get one client by ID
   getClientsById({ params }, res) {
     Clients.findOne({ _id: params.id })
-    .populate({
-        path: 'Groups',
-        select: '-__v'
-    })
       .select('-__v')
       .then(dbClientsData => res.json(dbClientsData))
       .catch(err => {

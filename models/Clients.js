@@ -29,12 +29,12 @@ const ClientsSchema = new Schema(
         required: true,
       },
 
-      Group: [
+      /* Group: [
         {
           type: Schema.Types.ObjectId,
           ref: 'Groups'
         }
-      ]
+      ] */
     },
     {
       toJSON: {
@@ -45,10 +45,6 @@ const ClientsSchema = new Schema(
       id: false
     }
   );
-  
-  ClientsSchema.virtual('ClientsCount').get(function() {
-    return this.replies.length;
-  });
   
   
   const Clients = model('Clients', ClientsSchema);

@@ -76,3 +76,15 @@ getGroupsById({ params }, res) {
 }
 
 module.exports = groupsController;
+
+/* {
+	"clientsName": "randy",
+	
+	"clientsAge": "26",
+	
+	"clientsGoals": "run a marathon",
+	
+	"clientsExp": "5 years of long distance running",
+	
+	"clientsDays": "Monday and Friday"
+} */
