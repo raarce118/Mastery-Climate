@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const commentRoutes = require('./Clients-routes');
-const pizzaRoutes = require('./Groups-routes');
+const clientsRoutes = require('./Clients-routes');
+const groupsRoutes = require('./Groups-routes');
 
 router.use('/Clients', clientsRoutes);
 router.use('/Groups', groupsRoutes);
