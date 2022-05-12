@@ -15,7 +15,7 @@ const groupsController = {
 
 
 // get one Group by id
-getgroupsById({ params }, res) {
+getGroupsById({ params }, res) {
     Groups.findOne({ _id: params.id })
          .populate({
          path: 'Clients',
@@ -29,7 +29,7 @@ getgroupsById({ params }, res) {
       });
   },
   // add Client to a group
-  addClient({ params, body }, res) {
+  addClients({ params, body }, res) {
     console.log(params);
     Groups.create(body)
       .then(({ _id }) => {
@@ -54,8 +54,8 @@ getgroupsById({ params }, res) {
   // remove client
   removeClients({ params }, res) {
     Clients.findOneAndDelete({ _id: params.commentId })
-      .then(deletedComment => {
-        if (!deletedComment) {
+      .then(deletedClients => {
+        if (!deletedClients) {
           return res.status(404).json({ message: 'No comment with this id!' });
         }
         return Clients.findOneAndUpdate(

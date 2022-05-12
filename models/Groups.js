@@ -2,13 +2,8 @@ const { Schema, model, } = require('mongoose');
 
 const GroupsSchema = new Schema(
     {
-      groupsMastery: {
+      groupsName: {
         type: String,
-        required: true,
-        trim: true
-      },
-      groupsPerformance: {
-        type: Number,
         required: true,
         trim: true
       },

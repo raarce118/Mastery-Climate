@@ -11,13 +11,13 @@ const {
 // /api/Thought
 router
   .route('/')
-  .get(getAllGroups)
+  .get(getAllGroups);
   
 
 // /api/Thought/:id
 router
   .route('/:id')
-  .get(getGroupsById)
+  .get(getGroupsById);
 
 
  
